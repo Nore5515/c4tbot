@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+.linkbox {
+  display: flex;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.link {
+  /* background-color: blue; */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

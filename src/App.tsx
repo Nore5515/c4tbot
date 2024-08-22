@@ -21,6 +21,10 @@ function App() {
           Here at C4tbot Studios, we are a software first studio accepting those who have the ideas for a user application, but lack the software knowhow. We help to bridge the gap between ideas and reality.
         </p>
       </div>
+      <div className='linkbox'>
+        <a className='link' href="https://nore5515.itch.io" target="_blank">Itch.IO</a>
+        <a className='link' href="https://www.threads.net/@noah_reed5515" data-app="share_buttons" data-app-config='{"service":"threads"}'>Threads</a>
+      </div>
     </>
   )
 }

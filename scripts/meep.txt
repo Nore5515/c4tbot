@@ -1,14 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/assets/index-f40OySzR.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DiwrgTda.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+﻿<?xml version="1.0" encoding="utf-8"?><Error><Code>AuthenticationFailed</Code><Message>Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
+RequestId:34ae58ec-001e-010a-3dc9-f49007000000
+Time:2024-08-22T19:27:23.1653827Z</Message><AuthenticationErrorDetail>Signature not valid in the specified time frame: Start [Thu, 22 Aug 2024 02:53:34 GMT] - Expiry [Thu, 22 Aug 2024 10:53:34 GMT] - Current [Thu, 22 Aug 2024 19:27:23 GMT]</AuthenticationErrorDetail></Error>
