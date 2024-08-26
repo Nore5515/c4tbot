@@ -2,7 +2,10 @@ SAS="sp=raw&st=2024-08-23T21:30:49Z&se=2024-08-24T05:30:49Z&spr=https&sv=2022-11
 HEADER="https://catbotstorage5515.blob.core.windows.net/"
 FILE="\$web/index.html"
 
+
 URL=$HEADER$FILE?$SAS
+
+URL_WEB=$HEADER\$web?$SAS
 
 
 ACC_NAME="catbotstorage5515"
@@ -29,17 +32,24 @@ az storage blob url \
     --container-name \$web \
     --name index.html
 
-az storage blob download \
-    --account-key $KEY \
-    --account-name $ACC_NAME \
-    -f ~/projects/js/c4tbotweb/dl/meep.txt \
-    -c \$web \
-    -n index.html
+# az storage blob download \
+#     --account-key $KEY \
+#     --account-name $ACC_NAME \
+#     -f ~/projects/js/c4tbotweb/dl/meep.txt \
+#     -c \$web \
+#     -n index.html
 
-az storage blob upload \
+# az storage blob upload \
+#     --account-key $KEY \
+#     --account-name $ACC_NAME \
+#     --overwrite true \
+#     -f $PROJ_PATH/output/index.html \
+#     -c \$web \
+#     -n index.html
+
+az storage blob upload-batch \
     --account-key $KEY \
     --account-name $ACC_NAME \
-    --overwrite true \
-    -f $PROJ_PATH/output/index.html \
-    -c \$web \
-    -n index.html
+    -d $URL_WEB \
+    -s "../dist" \
+    --overwrite true
