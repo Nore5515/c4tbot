@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import catbotLogo from './assets/catbot.png'
 import './App.css'
+import ExampleModule from './ExampleModule'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const {getViewText, CreateButton, InnerPage} = ExampleModule();
 
   return (
     <>
@@ -13,12 +16,17 @@ function App() {
         </a>
       </div>
       <h1>C4tbot Studios</h1>
+      <div style={{display: 'flex', justifyContent: 'center', columnGap: 10}}>
+        {CreateButton(InnerPage.HomePage)}
+        {CreateButton(InnerPage.GamePage)}
+      </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        
         <p>
-          Here at C4tbot Studios, we are a software first studio accepting those who have the ideas for a user application, but lack the software knowhow. We help to bridge the gap between ideas and reality.
+          {getViewText()}
         </p>
       </div>
       <div className='linkbox'>
